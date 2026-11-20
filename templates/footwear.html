@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Footwear | SWISH</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <nav>
+    <div class="logo">SWISH</div>
+    <ul class="nav-links">
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="{{ url_for('footwear') }}">Footwear</a></li>
+        <li><a href="#">Apparel</a></li>
+        <li><a href="#">Brands</a></li>
+        <li><a href="#">CART</a></li>
+    </ul>
+  </nav>
+
+<section class="product-grid">
+    {% for shoe in sneakers %}
+    <div class="product-card">
+      <img src="{{ url_for('static', filename=shoe.image) }}" alt="{{ shoe.name }}">
+      <div class="product-info">
+        <h3>{{ shoe.name }}</h3>
+        <p class="price">{{ shoe.price }}</p>
+        <form action="#" method="post">
+          <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+</section>
+</body>
+</html>

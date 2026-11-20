@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 60px;
+    color: rgb(148, 35, 35);
+    margin-bottom: 50px;
+}
+
+.content a{
+    display: inline-block;
+    font-size: 1em;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid rgb(148, 35, 35);
+    border-radius: 50px;
+    letter-spacing: 4px;
+    transition: 0.2s;
+}
+
+.content a:hover{
+    letter-spacing: 10px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 0 20px 5px whitesmoke, 0 0 40px 10px #00f0ff33;
+}
+
+.background-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .background-clip {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .background-clip {
+        width: auto;
+        height: 100%;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Poppins, sans-serif;
+  background-color: rgb(15, 12, 12);
+  color: #fff;
+}
+
+nav {
+  background-color: #000;
+  padding: 20px 40px;
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+nav .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+nav .nav-links a:hover {
+  color: orangered;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-areas: 
+    "nike adidas"
+    "carhartt carhartt";
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 30px;
+}
+
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer; 
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.02); 
+}
+
+
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.nikesb {
+  grid-area: nike;
+}
+
+.apparel img {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.carhartt {
+  grid-area: carhartt;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 125px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(251, 251, 226);
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background-color: #111;
+}
+
+.product-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: #ff4a4a;
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.add-to-cart-btn:hover {
+    background: #444;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>SWISH</title>
+</head>
+<body>
+<nav>
+  <div class="logo">SWISH</div>
+  <ul class="nav-links">
+    <li><a href="#">New Arrivals</a></li>
+    <li><a href="{{ url_for('footwear') }}">Footwear</a></li>
+    <li><a href="#">Apparel</a></li>
+    <li><a href="#">Brands</a></li>
+    <li><a href="#">CART</a></li>
+  </ul>
+</nav>
+
+  <section class="hero-grid">
+    <div class="item nikesb">
+      <img src="{{ url_for('static', filename='images/sbdunks/sb_dunks.webp') }}" alt="SB Dunks" width="400">
+      <div class="label">Nike SB</div>
+    </div>
+    <div class="item apparel">
+      <img src="{{ url_for('static', filename='images/apparel/apparel.jpeg') }}" alt="Apparel" width="400">
+      <div class="label">Adidas Tennis</div>
+    </div>
+    <div class="item carhartt">
+      <img src="{{ url_for('static', filename='images/carharrt/carharrt.jpg') }}" alt="Carharrt" width="400">
+      <div class="label">Carhartt</div>
+    </div>
+  </section>
+</body>
+</html>
